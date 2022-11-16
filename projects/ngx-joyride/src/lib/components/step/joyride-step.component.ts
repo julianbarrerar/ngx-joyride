@@ -208,7 +208,7 @@ export class JoyrideStepComponent implements OnInit, OnDestroy, AfterViewInit {
         this.targetHeight = this.step.targetViewContainer.element.nativeElement.getBoundingClientRect().height;
         this.targetAbsoluteLeft =
             position === 'fixed'
-                ? this.documentService.getElementFixedLeft(
+                ? this.documentService.getElementAbsoluteLeft(
                       this.step.targetViewContainer.element
                   )
                 : this.documentService.getElementAbsoluteLeft(
@@ -216,7 +216,7 @@ export class JoyrideStepComponent implements OnInit, OnDestroy, AfterViewInit {
                   );
         this.targetAbsoluteTop =
             position === 'fixed'
-                ? this.documentService.getElementFixedTop(
+                ? this.documentService.getElementAbsoluteTop(
                       this.step.targetViewContainer.element
                   )
                 : this.documentService.getElementAbsoluteTop(

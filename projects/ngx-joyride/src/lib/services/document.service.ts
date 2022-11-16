@@ -85,10 +85,10 @@ export class DocumentService implements IDocumentService {
         keywordToDiscard: string
     ) {
         const x1 = isElementFixed
-            ? this.getElementFixedLeft(elementRef)
+            ? this.getElementAbsoluteLeft(elementRef)
             : this.getElementAbsoluteLeft(elementRef);
         const y1 = isElementFixed
-            ? this.getElementFixedTop(elementRef)
+            ? this.getElementAbsoluteTop(elementRef)
             : this.getElementAbsoluteTop(elementRef);
         const x2 =
             x1 + elementRef.nativeElement.getBoundingClientRect().width - 1;
@@ -121,7 +121,7 @@ export class DocumentService implements IDocumentService {
             elementRef.nativeElement
         );
         const top = isElementFixed
-            ? this.getElementFixedTop(elementRef)
+            ? this.getElementAbsoluteTop(elementRef)
             : this.getElementAbsoluteTop(elementRef);
         if (
             firstScrollableParent !== this.DOMService.getNativeDocument().body

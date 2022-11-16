@@ -129,7 +129,7 @@ export class JoyrideBackdropService {
     private getTargetTotalTop(step: JoyrideStep) {
         let targetVC = step.targetViewContainer;
         return step.isElementOrAncestorFixed
-            ? this.documentService.getElementFixedTop(targetVC.element)
+            ? this.documentService.getElementAbsoluteTop(targetVC.element)
             : this.documentService.getElementAbsoluteTop(targetVC.element);
     }
 
@@ -137,7 +137,7 @@ export class JoyrideBackdropService {
         let targetVC = step.targetViewContainer;
 
         return step.isElementOrAncestorFixed
-            ? this.documentService.getElementFixedLeft(targetVC.element)
+            ? this.documentService.getElementAbsoluteLeft(targetVC.element)
             : this.documentService.getElementAbsoluteLeft(targetVC.element);
     }
     redraw(step: JoyrideStep, scroll: Scroll) {
